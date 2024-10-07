@@ -7,7 +7,6 @@ const RESPONSES = [
   'Tesó, Bomba',
   'Miiiii',
   'Beestek a Crypto részvényeim',
-  'Tesó, beestek a Crypto részvényeim',
 ];
 
 export function getResponseArray() {

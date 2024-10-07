@@ -27,11 +27,19 @@ p {
   gap: 16px;
 }
 
-.coversation-box {
+.coversation-box-prompt {
   padding: 8px 16px;
   border-radius: 24px;
   background-color: gray;
+  overflow-wrap: break-word;
   max-width: 50%;
+}
+
+.coversation-box-response {
+  padding: 8px 16px;
+  border-radius: 24px;
+  background-color: #323939;
+  overflow-wrap: break-word;
 }
 
 .coversation-prompt {
@@ -47,18 +55,20 @@ p {
 }
 
 .coversation-avatar {
-  margin-right: 32px;
+  margin-right: 8px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
 
 .response-type {
+  display: block;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards, blink-caret 0.75s step-end 4;
+  animation: typing 1.5s steps(50, end) forwards, blink-caret 0.75s step-end 4;
   width: 0;
 }
+
 @keyframes typing {
   from {
     width: 0;
