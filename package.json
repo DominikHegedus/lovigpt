@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /lovigpt/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:gpt": "node dist/gpt/server/server.mjs"
+    "serve:ssr:gpt": "node dist/gpt/server/server.mjs",
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
