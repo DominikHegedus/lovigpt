@@ -8,3 +8,10 @@
   width: 100%;
   max-width: 70vw;
 }
+
+@media only screen and (max-width: 600px) {
+  .frame-main {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
