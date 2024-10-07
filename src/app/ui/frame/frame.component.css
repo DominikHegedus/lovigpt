@@ -1,0 +1,10 @@
+.frame {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.frame-main {
+  width: 100%;
+  max-width: 70vw;
+}

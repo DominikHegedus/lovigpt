@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="input-form-field" appearance="outline">
+    <input
+      matInput
+      placeholder="Üzenet a következőnek: Lovas"
+      type="text"
+      formControlName="prompt"
+    />
+    <button
+      class="input-form-field-input-suffix"
+      mat-icon-button
+      matSuffix
+      type="submit"
+    >
+      <mat-icon matSuffix>arrow_upward</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
