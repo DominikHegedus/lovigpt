@@ -19,6 +19,7 @@ import { InputComponent } from '../../ui/input/input.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatComponent {
+  // focus on newest
   @ViewChild('focusArea') focusArea?: ElementRef<HTMLElement>;
 
   chatService = inject(ChatService);
