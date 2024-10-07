@@ -1,5 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  inject,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,6 +32,10 @@ import { Conversation } from '../../models/conversation.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent {
+  @ViewChild('promptInput') promptInput!: ElementRef<HTMLInputElement>;
+
+  @Output() submitted: EventEmitter<void> = new EventEmitter();
+
   chatService = inject(ChatService);
 
   form = new FormGroup({
@@ -37,5 +49,7 @@ export class InputComponent {
     };
     this.chatService.add(conversation);
     this.form.controls.prompt.reset();
+    this.promptInput.nativeElement.blur();
+    this.submitted.emit();
   }
 }

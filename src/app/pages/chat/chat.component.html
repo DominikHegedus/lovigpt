@@ -1,7 +1,7 @@
 <app-frame>
   <div class="app-wrapper">
     <div class="coversation-container">
-      <div class="coversation-wrapper">
+      <div class="coversation-wrapper" #focusArea>
         @for (chat of $conversation(); track $index) {
         <div class="coversation-prompt">
           <p class="coversation-box">{{ chat.prompt }}</p>
@@ -13,6 +13,6 @@
         }
       </div>
     </div>
-    <app-input class="app-input" />
+    <app-input class="app-input" (submitted)="onSubmit()" />
   </div>
 </app-frame>

@@ -1,6 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field class="input-form-field" appearance="outline">
     <input
+      #promptInput
       matInput
       placeholder="Üzenet a következőnek: Lovas"
       type="text"
