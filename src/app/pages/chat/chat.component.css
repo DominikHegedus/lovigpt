@@ -1,0 +1,80 @@
+p {
+  margin: 0;
+}
+
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.app-input {
+  width: 100%;
+}
+
+.coversation-container {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 32px 0;
+}
+
+.coversation-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.coversation-box {
+  padding: 8px 16px;
+  border-radius: 24px;
+  background-color: gray;
+  max-width: 50%;
+}
+
+.coversation-prompt {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coversation-response {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.coversation-avatar {
+  margin-right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.response-type {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards, blink-caret 0.75s step-end 4;
+  width: 0;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-right: none;
+  }
+  50% {
+    border-right: 0.15em solid #0dd;
+  }
+}

@@ -1,0 +1,18 @@
+<app-frame>
+  <div class="app-wrapper">
+    <div class="coversation-container">
+      <div class="coversation-wrapper">
+        @for (chat of $conversation(); track $index) {
+        <div class="coversation-prompt">
+          <p class="coversation-box">{{ chat.prompt }}</p>
+        </div>
+        <div class="coversation-response">
+          <img class="coversation-avatar" src="lovics.png" />
+          <p class="response-type">{{ chat.response }}</p>
+        </div>
+        }
+      </div>
+    </div>
+    <app-input class="app-input" />
+  </div>
+</app-frame>
